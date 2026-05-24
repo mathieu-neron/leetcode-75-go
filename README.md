@@ -6,10 +6,10 @@ Parallel companion to `leetcode-75-py`. One folder per problem grouped under cat
 
 ```pwsh
 # Single problem
-go test ./array-string/02-greatest-common-divisor-of-strings/
+go test ./01-array-string/02-greatest-common-divisor-of-strings/
 
 # One category
-go test ./array-string/...
+go test ./01-array-string/...
 
 # Everything
 go test ./...
