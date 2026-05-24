@@ -1,16 +1,15 @@
 package solution
 
 import (
-	"testing"
 	"reflect"
+	"testing"
 )
 
 func TestKidsWithCandies(t *testing.T) {
-	t.Skip("TODO: implement kidsWithCandies")
 	tests := []struct {
-		candies []int
+		candies      []int
 		extraCandies int
-		want []bool
+		want         []bool
 	}{
 		{[]int{2, 3, 5, 1, 3}, 3, []bool{true, true, true, false, true}},
 		{[]int{4, 2, 1, 1, 2}, 1, []bool{true, false, false, false, false}},

@@ -5,7 +5,6 @@ import (
 )
 
 func TestGcdOfStrings(t *testing.T) {
-	t.Skip("TODO: implement gcdOfStrings")
 	tests := []struct {
 		str1 string
 		str2 string
