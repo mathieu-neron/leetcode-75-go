@@ -1,11 +1,22 @@
 package solution
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestLargestAltitude(t *testing.T) {
 	t.Skip("TODO: implement largestAltitude")
-	// TODO: table-driven cases
-	// got := largestAltitude(...)
-	// want := ...
-	// if got != want { t.Errorf("got %v, want %v", got, want) }
+	tests := []struct {
+		gain []int
+		want int
+	}{
+		{[]int{-5, 1, 5, 0, -7}, 1},
+		{[]int{-4, -3, -2, -1, 4, 3, 2}, 0},
+	}
+	for _, tc := range tests {
+		got := largestAltitude(tc.gain)
+		if got != tc.want {
+			t.Errorf("largestAltitude(%v) = %v, want %v", tc, got, tc.want)
+		}
+	}
 }

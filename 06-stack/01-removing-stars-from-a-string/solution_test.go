@@ -1,11 +1,22 @@
 package solution
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestRemoveStars(t *testing.T) {
 	t.Skip("TODO: implement removeStars")
-	// TODO: table-driven cases
-	// got := removeStars(...)
-	// want := ...
-	// if got != want { t.Errorf("got %v, want %v", got, want) }
+	tests := []struct {
+		s string
+		want string
+	}{
+		{"leet**cod*e", "lecoe"},
+		{"erase*****", ""},
+	}
+	for _, tc := range tests {
+		got := removeStars(tc.s)
+		if got != tc.want {
+			t.Errorf("removeStars(%v) = %v, want %v", tc, got, tc.want)
+		}
+	}
 }

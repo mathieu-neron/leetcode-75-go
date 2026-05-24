@@ -1,11 +1,22 @@
 package solution
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestPredictPartyVictory(t *testing.T) {
 	t.Skip("TODO: implement predictPartyVictory")
-	// TODO: table-driven cases
-	// got := predictPartyVictory(...)
-	// want := ...
-	// if got != want { t.Errorf("got %v, want %v", got, want) }
+	tests := []struct {
+		senate string
+		want string
+	}{
+		{"RD", "Radiant"},
+		{"RDD", "Dire"},
+	}
+	for _, tc := range tests {
+		got := predictPartyVictory(tc.senate)
+		if got != tc.want {
+			t.Errorf("predictPartyVictory(%v) = %v, want %v", tc, got, tc.want)
+		}
+	}
 }

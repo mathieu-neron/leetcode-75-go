@@ -1,11 +1,23 @@
 package solution
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestIsSubsequence(t *testing.T) {
 	t.Skip("TODO: implement isSubsequence")
-	// TODO: table-driven cases
-	// got := isSubsequence(...)
-	// want := ...
-	// if got != want { t.Errorf("got %v, want %v", got, want) }
+	tests := []struct {
+		s string
+		t string
+		want bool
+	}{
+		{"abc", "ahbgdc", true},
+		{"axc", "ahbgdc", false},
+	}
+	for _, tc := range tests {
+		got := isSubsequence(tc.s, tc.t)
+		if got != tc.want {
+			t.Errorf("isSubsequence(%v) = %v, want %v", tc, got, tc.want)
+		}
+	}
 }
