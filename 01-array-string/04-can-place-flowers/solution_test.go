@@ -5,11 +5,10 @@ import (
 )
 
 func TestCanPlaceFlowers(t *testing.T) {
-	t.Skip("TODO: implement canPlaceFlowers")
 	tests := []struct {
 		flowerbed []int
-		n int
-		want bool
+		n         int
+		want      bool
 	}{
 		{[]int{1, 0, 0, 0, 1}, 1, true},
 		{[]int{1, 0, 0, 0, 1}, 2, false},
